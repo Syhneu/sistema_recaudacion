@@ -4,7 +4,7 @@ from django.utils.translation import gettext_lazy as _
 # Create your models here.
 
 class RcContrib(models.Model):
-    cod_con = models.IntegerField(unique=True)    # codigo contribuyente
+    cod_con = models.IntegerField(primary_key=True)    # codigo contribuyente
     nom_con = models.CharField(max_length=255)                  # nombre o razon social
     
     class TipoPersona(models.TextChoices):
@@ -79,3 +79,27 @@ class RcContrib(models.Model):
     fecha_fin_junta = models.DateField()                        # fecha de vencimiento de junta
     usu_reg = models.IntegerField()                             # codigo de usuario de registro de expediente
     usu_apro = models.IntegerField()                            # codigo de usuario de aprobacion de expediente
+
+class RcRepresentante(models.Model):
+    cod_con = models.ForeignKey(RcContrib, on_delete= models.CASCADE)
+    cedula = models.CharField(max_length=12)
+    nr_civi = models.CharField(max_length=100)
+    nombre = models.TextField()
+    cargo = models.TextField()
+    direccion = models.TextField()
+    telefono = models.TextField()
+    cod_con = models.IntegerField(max_length=4)
+    correo = models.EmailField()
+    celular = models.CharField(max_length=30)
+
+class RcAccionistas(models.Model):
+    cod_repre = models.ForeignKey(RcContrib, on_delete=models.CASCADE)
+    cedula = models.CharField(max_length=12)
+    nombre = models.TextField()
+    nr_civi = models.TextField()
+    cargo = models.TextField()
+    direccion = models.TextField()
+    telefono = models.CharField(max_length=11)
+    cod_con = models.models.IntegerField(max_length=4)
+    correo = models.EmailField()
+    celular = models.CharField(max_length=11)
