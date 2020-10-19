@@ -37,7 +37,11 @@ class ContribuyentesForm(forms.ModelForm):
         )
 
         labels = {
-            'num_patente': 'Nº Patente'
+            'num_patente': 'Nº Patente', 'fec_inicio': 'Fecha de Expedición', 'fec_final': 'Fecha de Vencimiento'
         }
 
-        # widgets = { }
+        widgets = {
+            'num_patente': forms.TextInput(attrs={'class': 'form-control'}),
+            'fec_inicio': forms.TextInput(attrs={'class': 'form-control'}),
+            'fec_final': forms.TextInput(attrs={'class': 'form-control'}),
+        }

@@ -4,8 +4,21 @@
     <h1>Planilla de Censo</h1>
     <h2>Registro de Contribuyente</h2>
     <form action="">
-    {% csrf_token %}
-    {{ form.as_p }}
+        {% csrf_token %}
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="{{ form.num_patente.id_for_label}}">Nº Patente</label>
+                {{ form.num_patente }}
+            </div>
+            <div class="form-group col-md-4">
+                <label for="{{ form.fec_inicio.id_for_label}}">Fecha de Expedición</label>
+                {{ form.fec_inicio }}
+            </div>
+            <div class="form-group col-md-4">
+                <label for="{{ form.fec_final.id_for_label}}">Fecha de Vencimiento</label>
+                {{ form.fec_final }}
+            </div>
+        </div>
     </form>
 </div>
 {% endblock content %}
