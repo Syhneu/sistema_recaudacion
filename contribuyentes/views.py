@@ -5,9 +5,6 @@ from .models import RcContrib
 
 # Create your views here.
 
-def index(request):
-    return render(request, 'index.html')
-
 class CreateContribuyente(generic.CreateView):
     model = RcContrib
     template = 'contribuyentes/registro.html'

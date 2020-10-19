@@ -11,7 +11,7 @@ class ContribuyentesForm(forms.ModelForm):
             'ced_rif', 'nom_con',
             'razon_comer',
             'telf_empresa', 'whatsapp',
-            'dir_cont'
+            'dir_cont',
             'correo_empresa', 'correo_contacto',
             'cod_edo', 'cod_mun', 'cod_par',
             'fecha_fin_junta',

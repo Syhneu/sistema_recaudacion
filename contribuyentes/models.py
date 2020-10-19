@@ -48,7 +48,7 @@ class RcContrib(models.Model):
         default = Residente.RESIDENTE
     )
 
-    fec_inicio = models.DateField(auto_now=True)                # fecha expedicion de expediente
+    fec_inicio = models.DateField()                             # fecha expedicion de expediente
     periodo = models.IntegerField()                             # periodo de registro
     fec_final = models.DateField()                              # fecha vencimiento de expediente
     fax = models.CharField(max_length=25)
