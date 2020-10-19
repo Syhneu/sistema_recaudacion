@@ -10,7 +10,7 @@ class RcContrib(models.Model):
     class TipoPersona(models.TextChoices):
         JURIDICA = 'J', _('Juridica')
         NATURAL = 'N', _('Natural')
-        GOVIERNO = 'G', _('Govierno')
+        GOBIERNO = 'G', _('Gobierno')
     
     tipo_persona = models.CharField(                            # tipo de persona
         max_length = 1,
