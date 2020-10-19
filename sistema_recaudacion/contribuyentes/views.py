@@ -12,6 +12,7 @@ def registroContribuyente(request):
     if form.is_valid():
       form.save()
       return redirect('inicio.html')
-    else:
-      form = RegistroContribuyente()
-  return render(request, '/registrocontribuyente.html', {'form': form})
+  else:
+    form = RegistroContribuyente()
+    
+  return render(request, 'registrocontribuyente.html', {'form': form})

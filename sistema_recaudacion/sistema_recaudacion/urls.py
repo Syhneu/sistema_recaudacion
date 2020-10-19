@@ -19,6 +19,6 @@ from contribuyentes import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('inicio/', views.index, name="index"),
-    path('registrocontribuyente/', views.index, name="registrocontribuyente")
+    path('', views.index, name="index"),
+    path('registrocontribuyente/', views.registroContribuyente, name="registrocontribuyente")
 ]

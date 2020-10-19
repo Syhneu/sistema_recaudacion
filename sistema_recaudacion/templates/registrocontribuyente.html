@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<form action="/your-name/" method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
+{% endblock header %}
