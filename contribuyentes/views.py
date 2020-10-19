@@ -7,5 +7,5 @@ from .models import RcContrib
 
 class CreateContribuyente(generic.CreateView):
     model = RcContrib
-    template = 'contribuyentes/registro.html'
+    template = 'registro.html'
     form_class = ContribuyentesForm
