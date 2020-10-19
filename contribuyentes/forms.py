@@ -41,7 +41,25 @@ class ContribuyentesForm(forms.ModelForm):
         )
 
         labels = {
-            'num_patente': 'Nº Patente'
+            'num_patente': 'Nº Patente',
+            'fec_inicio': 'Fecha Expedición',
+            'fec_final': 'Fecha Vencimiento',
+            'periodo': 'Año',
+            'tipo_persona': 'Tipo Persona',
+            'residente': 'Tipo',
+            'sucursal': 'Sucursal',
+            'ced_rif': 'RIF / Cédula',
+            'nom_con': 'Denominación Comercial',
+            'razon_comer': 'Razón Social',
+            'telf_empresa': 'Teléfono Empresa',
+            'whatsapp': 'N° WhatsApp',
+            'dir_cont': 'Direccion',
+            'correo_empresa': 'Correo Empresa',
+            'correo_contacto': 'Correo Contacto',
+            'cod_edo': 'Estado',
+            'cod_mun': 'Municipio',
+            'cod_par': 'Parroquia',
+            'fecha_fin_junta': 'Fecha Vencimiento - Junta Directiva',
         }
 
         # widgets = { }
