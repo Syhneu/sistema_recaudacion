@@ -22,7 +22,7 @@ class RcContrib(models.Model):
     cod_edo = models.IntegerField()                             # codigo estado
     cod_mun = models.IntegerField()                             # codigo municipio
     cod_par = models.IntegerField()                             # codigo parroquia
-    dir_cont = models.CharField(max_length=250)                 # direccion del contribuyente
+    dir_cont = models.TextField()                               # direccion del contribuyente
     telf_empresa = models.CharField(max_length=30)              # telefono de la empresa
 
     class Estatus(models.TextChoices):
@@ -37,7 +37,17 @@ class RcContrib(models.Model):
 
     con_acti_economica = models.IntegerField()                  # actividad economica
     transeunte = models.CharField(max_length=1)                 # transeunte permanente o temporal
-    residente = models.BooleanField()                           # (tipo) es residente
+
+    class Residente(models.TextChoices):
+        RESIDENTE = 'R', _('Residente')
+        NO_RESIDENTE = 'N', _('No Residente')
+
+    residente = models.CharField(                               # (tipo) es residente
+        max_length = 1,
+        choices = Residente.choices,
+        default = Residente.RESIDENTE
+    )
+
     fec_inicio = models.DateField(auto_now=True)                # fecha expedicion de expediente
     periodo = models.IntegerField()                             # periodo de registro
     fec_final = models.DateField()                              # fecha vencimiento de expediente
