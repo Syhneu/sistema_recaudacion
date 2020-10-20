@@ -81,25 +81,25 @@ class RcContrib(models.Model):
     usu_apro = models.IntegerField()                            # codigo de usuario de aprobacion de expediente
 
 class RcRepresentante(models.Model):
-    cod_con = models.ForeignKey(RcContrib, on_delete= models.CASCADE)
+    cod_repre = models.IntegerField(primary_key=True)
     cedula = models.CharField(max_length=12)
     nr_civi = models.CharField(max_length=100)
     nombre = models.TextField()
     cargo = models.TextField()
     direccion = models.TextField()
     telefono = models.TextField()
-    cod_con = models.IntegerField()
+    cod_con = models.ForeignKey(RcContrib, on_delete=models.CASCADE)
     correo = models.EmailField()
     celular = models.CharField(max_length=30)
 
 class RcAccionistas(models.Model):
-    cod_repre = models.ForeignKey(RcContrib, on_delete=models.CASCADE)
+    cod_repre = models.IntegerField(primary_key=True)
     cedula = models.CharField(max_length=12)
     nombre = models.TextField()
     nr_civi = models.TextField()
     cargo = models.TextField()
     direccion = models.TextField()
     telefono = models.CharField(max_length=11)
-    cod_con = models.IntegerField()
+    cod_con = models.ForeignKey(RcContrib, on_delete=models.CASCADE)
     correo = models.EmailField()
     celular = models.CharField(max_length=11)
