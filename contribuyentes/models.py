@@ -88,7 +88,7 @@ class RcRepresentante(models.Model):
     cargo = models.TextField()
     direccion = models.TextField()
     telefono = models.TextField()
-    cod_con = models.IntegerField(max_length=4)
+    cod_con = models.IntegerField()
     correo = models.EmailField()
     celular = models.CharField(max_length=30)
 
@@ -100,6 +100,6 @@ class RcAccionistas(models.Model):
     cargo = models.TextField()
     direccion = models.TextField()
     telefono = models.CharField(max_length=11)
-    cod_con = models.models.IntegerField(max_length=4)
+    cod_con = models.IntegerField()
     correo = models.EmailField()
     celular = models.CharField(max_length=11)

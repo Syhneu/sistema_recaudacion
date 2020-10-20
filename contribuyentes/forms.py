@@ -21,14 +21,14 @@ class ContribuyentesForm(forms.ModelForm):
             'con_acti_economica',
 
             # 3. Registro mercantil de la empresa
-            'tomo', 'protocolo',
-            'fecha_inscripcion', 'fecha_fin_registro',
+            #'tomo', 'protocolo',
+            #'fecha_inscripcion', 'fecha_fin_registro',
             #capital
             
             # 4. Representantes de la empresa
             # TODO relacion con modelo rcrepresentante
-            'cod_con','cedula','nr_civi','nombre','cargo','direccion',
-            'telefono','cod_con','correo','celular'
+            #'cod_con','cedula','nr_civi','nombre','cargo','direccion',
+            #'telefono','cod_con','correo','celular',
 
             # 5. Registro acta de asamblea
             'numero_acta', 'fecha_regis_acta', 'fecha_fin_acta',
@@ -36,8 +36,8 @@ class ContribuyentesForm(forms.ModelForm):
 
             # 6. Registro de accionistas
             # TODO relacion con modelo rcaccionistas
-            'cod_repre','cedula','nombre','nr_civi','cargo','direccion',
-            'telefono', 'cod_con','correo','celular'
+            #'cod_repre','cedula','nombre','nr_civi','cargo','direccion',
+            #'telefono', 'cod_con','correo','celular'
         )
 
         labels = {
