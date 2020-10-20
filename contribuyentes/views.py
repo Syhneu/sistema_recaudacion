@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views import generic
 from .forms import ContribuyentesForm
-from .models import RcContrib
+from .models import RcContrib, RcAccionistas, RcRepresentante
 
 # Create your views here.
 

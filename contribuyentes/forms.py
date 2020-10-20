@@ -27,6 +27,8 @@ class ContribuyentesForm(forms.ModelForm):
             
             # 4. Representantes de la empresa
             # TODO relacion con modelo rcrepresentante
+            'cod_con','cedula','nr_civi','nombre','cargo','direccion',
+            'telefono','cod_con','correo','celular'
 
             # 5. Registro acta de asamblea
             'numero_acta', 'fecha_regis_acta', 'fecha_fin_acta',
@@ -34,10 +36,30 @@ class ContribuyentesForm(forms.ModelForm):
 
             # 6. Registro de accionistas
             # TODO relacion con modelo rcaccionistas
+            'cod_repre','cedula','nombre','nr_civi','cargo','direccion',
+            'telefono', 'cod_con','correo','celular'
         )
 
         labels = {
-            'num_patente': 'Nº Patente', 'fec_inicio': 'Fecha de Expedición', 'fec_final': 'Fecha de Vencimiento'
+            'num_patente': 'Nº Patente',
+            'fec_inicio': 'Fecha Expedición',
+            'fec_final': 'Fecha Vencimiento',
+            'periodo': 'Año',
+            'tipo_persona': 'Tipo Persona',
+            'residente': 'Tipo',
+            'sucursal': 'Sucursal',
+            'ced_rif': 'RIF / Cédula',
+            'nom_con': 'Denominación Comercial',
+            'razon_comer': 'Razón Social',
+            'telf_empresa': 'Teléfono Empresa',
+            'whatsapp': 'N° WhatsApp',
+            'dir_cont': 'Direccion',
+            'correo_empresa': 'Correo Empresa',
+            'correo_contacto': 'Correo Contacto',
+            'cod_edo': 'Estado',
+            'cod_mun': 'Municipio',
+            'cod_par': 'Parroquia',
+            'fecha_fin_junta': 'Fecha Vencimiento - Junta Directiva',
         }
 
         widgets = {
