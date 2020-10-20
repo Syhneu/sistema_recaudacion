@@ -64,6 +64,23 @@ class ContribuyentesForm(forms.ModelForm):
 
         widgets = {
             'num_patente': forms.TextInput(attrs={'class': 'form-control'}),
-            'fec_inicio': forms.TextInput(attrs={'class': 'form-control'}),
-            'fec_final': forms.TextInput(attrs={'class': 'form-control'}),
-        }
+            'fec_inicio': forms.DateInput(attrs={'class': 'form-control'}),
+            'fec_final': forms.DateInput(attrs={'class': 'form-control'}),
+            'periodo': forms.TextInput(attrs={'class': 'form-control'}),
+            'tipo_persona': forms.Select(attrs={'class': 'form-control'}),
+            'residente': forms.Select(attrs={'class': 'form-control'}),
+            'sucursal' : forms.Select(attrs={'class': 'form-control'}),
+            'ced_rif' : forms.TextInput(attrs={'class':'form-control'}),
+            'nom_con': forms.TextInput(attrs={'class': 'form-control'}),
+            'razon_comer': forms.TextInput(attrs={'class': 'form-control'}),
+            'telf_empresa' : forms.TextInput(attrs={'class': 'form-control'}),
+            'whatsapp': forms.TextInput(attrs={'class': 'form-control'}),
+            'dir_cont': forms.TextInput(attrs={'class': 'form-control'}),
+            'correo_empresa': forms.EmailInput(attrs={'class':'form-control'}),
+            'correo_contacto' : forms.EmailInput(attrs={'class':'form-control'}),
+            'cod_edo':forms.NumberInput(attrs={'class': 'form-control'}),
+            'cod_mun':forms.NumberInput(attrs={'class': 'form-control'}),
+            'cod_par':forms.NumberInput(attrs={'class': 'form-control'}),
+            'fecha_fin_junta':forms.TextInput(attrs={'class': 'form-control'}),
+            
+    }
